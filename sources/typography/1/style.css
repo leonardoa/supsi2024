@@ -10,3 +10,10 @@ h1, h2, h3, h4, h5, h6, p, em, strong {
   color: var(--color-primary);
   margin: 0
 }
+
+.main-p {
+  color: red;
+  font-family: 'Arial';
+  font-style: italic;
+  font-weight: bold;
+}

@@ -47,4 +47,17 @@
 }
 
 
+.flex-item-2 {
+  width: 50%;
+  height: 100px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  color: var(--color-primary);;
+  display: flex;
+  justify-content: center;
+  background: red;
+  align-items: center;
+}
+
+
 

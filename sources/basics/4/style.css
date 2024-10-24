@@ -45,11 +45,8 @@ a {
 }
 
 .special-link-2 {
-  color: black;
   font-size: 20px;
-  transition: 4s;
-
-
+  color: orange;
 }
 
 .special-link-2:hover {
@@ -91,11 +88,11 @@ li {
 /** image **/
 .special-image {
   width: 30%;
-  border-radius: 5px;
+  border-radius: 100px;
 }
 .special-image-2 {
   width: 15%;
-  border-radius: 5px;
+  border-radius: 50px;
   margin-left: 5px;
 }
 
