@@ -38,13 +38,7 @@ function resizeFn(event) {
     windowWidth = window.innerWidth;
     if (video.readyState === 4) {
       //map range per creare una relazione tra la dimensione dello schermo al range da 0 a 1
-      let volume = mapRange(
-        Number(window.innerWidth / 100).toFixed(1),
-        5.0,
-        18,
-        0,
-        1
-      );
+      let volume = mapRange(Number(window.innerWidth / 100).toFixed(1),5,18,0,1);
       video.volume = volume;
     }
   }, 10);

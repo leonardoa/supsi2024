@@ -1,9 +1,6 @@
 //container
 let container = document.querySelector("#container");
 
-//container
-let containerMouse = document.querySelector("#container-mouse");
-
 //tools
 let tools = document.querySelector("#tools");
 
@@ -21,16 +18,16 @@ let videoLoaded = false;
 let mouseX, mouseY;
 
 //events
-container.addEventListener('mouseleave', mouseLeaveFn, true);
+container.addEventListener('click', mouseClickFn, true);
 container.addEventListener('mouseenter', mouseEnterFn, true);
+container.addEventListener('mouseleave', mouseLeaveFn, true);
 
-//mouseLeave
-function mouseLeaveFn(event) {
-	toolsData.innerHTML = `mouseLeave`;
+//mouseClick
+function mouseClickFn(event) {
+	toolsData.innerHTML = `click`;
 	if (statusImage >=1 && statusImage <= 49) {
 		img.src = `src/img/ezgif-frame-0${statusImage}.jpg`;
 		statusImage = statusImage + 1;
-		console.log(statusImage);
 	} else {
 		statusImage = 1;
 	}
@@ -40,3 +37,7 @@ function mouseEnterFn(event) {
 	toolsData.innerHTML = `mouseEnter`;
 }
 
+//mouseEnter
+function mouseLeaveFn(event) {
+	toolsData.innerHTML = `mouseLeave`;
+}

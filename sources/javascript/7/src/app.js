@@ -23,7 +23,7 @@ function mouseMoveFn(event) {
 	toolsData.innerHTML = `X: ${event.pageX}, Y: ${event.pageY}`;
 	mouseX = event.pageX;
 	mouseY = event.pageY;
-	letter.style['font-variation-settings'] = `"wght" ${mapRange(mouseY, 0, windowHeight, 100, 900)}, "ital" ${mapRange(mouseX, 0, windowWidth, 0, 12)}`;
+	letter.style['font-variation-settings'] = `"wght" ${mapRange(mouseY, 0, windowHeight, 100, 900)}, "wdth" ${mapRange(mouseX, 0, windowWidth, 100,200)}`;
 
 }
 

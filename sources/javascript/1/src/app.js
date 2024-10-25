@@ -1,7 +1,6 @@
 let variabilerettangolo = document.querySelector("#rettangolo");
 
 //buttons
-let btnZoomIn = document.querySelector("#zoom-in");
 let btnChangeColor = document.querySelector("#change-color");
 let btnBorderRadius = document.querySelector("#border-radius");
 let btnMarginTop = document.querySelector("#margin-top");

@@ -37,7 +37,7 @@ function mouseMoveFn(event) {
 		video.play();
 	}
 	else {
-		video.pause();
+		video.pause();	
 	}
 }
 
