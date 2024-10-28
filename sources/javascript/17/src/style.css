@@ -25,6 +25,7 @@ html {
 #container-image > img{
 	width: 150px;
 	border-radius: 10px;
+	opacity: 0;
 
 }
 

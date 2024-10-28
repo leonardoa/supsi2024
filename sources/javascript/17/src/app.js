@@ -6,7 +6,7 @@ let container = document.querySelector("#container");
 //img
 let img = document.querySelector("#img");
 
-let numOfImages = 15;
+let numOfImages = 10;
 
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
@@ -21,6 +21,7 @@ window.addEventListener("resize", resizeFn, true);
 function resizeFn() {
   windowHeight = window.innerHeight;
   const sectionNumber = findImageSection(windowHeight, screenSection);
+  img.style.opacity = 1;
   img.src = `src/img/${sectionNumber}.png`;
   img.style.transform = `scale(${sectionNumber / 6})`;
 }

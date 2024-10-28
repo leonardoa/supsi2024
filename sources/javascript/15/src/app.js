@@ -29,7 +29,7 @@ function mouseMoveFn(event) {
 
   const sectionNumber = findImageSection(mouseY, screenSection);
   document.querySelector(`#img${sectionNumber}`).style.opacity = "1";
-  document.querySelector(`#img${sectionNumber}`).style.transform = "scale(1.5)";
+  document.querySelector(`#img${sectionNumber}`).style.transform = "scale(1.5) rotate(360deg)";
 }
 
 //this function will find the section of the image

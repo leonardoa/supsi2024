@@ -1,22 +1,12 @@
-//01 - Mouse Hover Horizontal Move
-
-//container
 let container = document.querySelector("#container");
-
-//img
 let img = document.querySelector("#img");
-
 let numOfImages = 10;
-
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
 let mouseX, mouseY;
-
-//divide the screen
 let screenSection = windowWidth / numOfImages;
 
-//events
-container.addEventListener("mousemove", mouseMoveFn, true);
+container.addEventListener("mousemove", mouseMoveFn);
 
 function mouseMoveFn(event) {
   mouseX = event.clientX;

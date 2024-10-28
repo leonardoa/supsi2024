@@ -27,7 +27,7 @@ function mouseMoveFn(event) {
   });
 
   const sectionNumber = findImageSection(mouseX, screenSection);
-  console.log(sectionNumber);
+  
   document.querySelector(`#img${sectionNumber}`).style.display = "block";
 
 }

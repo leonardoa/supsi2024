@@ -25,6 +25,6 @@ html {
 #container-image > img{
 	width: 150px;
 	border-radius: 10px;
-	transition: all 0.2s;
+	transition: transform 1s;
 }
 

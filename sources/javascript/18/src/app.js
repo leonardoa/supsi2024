@@ -21,10 +21,13 @@ var oldX = window.screenX,
   oldY = window.screenY;
 
 var interval = setInterval(function () {
+
+  // Check if the window has moved
   if (oldX != window.screenX || oldY != window.screenY) {
     const sectionNumber = findImageSection(window.screenX, screenSection);
     img.src = `src/img/${sectionNumber}.png`;
   }
+  //get the window width
   oldX = window.screenX;
   oldY = window.screenY;
 }, 100);

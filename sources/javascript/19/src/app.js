@@ -21,13 +21,19 @@ var oldX = window.screenX,
   oldY = window.screenY;
 
 var interval = setInterval(function () {
+  //  Check if the window has moved
   if (oldX != window.screenX || oldY != window.screenY) {
+    // Find the section of the image
     const sectionNumber = findImageSection(window.screenY, screenSection);
     img.src = `src/img/${sectionNumber}.png`;
   }
+  // Update the old values
   oldX = window.screenX;
   oldY = window.screenY;
 }, 100);
+
+
+
 
 //this function will find the section of the image
 function findImageSection(screenY, screenSection, section = 1) {

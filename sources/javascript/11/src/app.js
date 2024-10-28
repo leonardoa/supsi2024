@@ -6,7 +6,7 @@ let container = document.querySelector("#container");
 //img
 let img = document.querySelector("#img");
 
-let numOfImages = 7;
+let numOfImages = 2;
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
 let mouseX, mouseY;
