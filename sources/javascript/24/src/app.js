@@ -1,5 +1,4 @@
 //volume and play/pause
-let video = document.getElementById("movie");
 let numOfImages = 7;
 
 function draw(predictions) {

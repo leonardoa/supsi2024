@@ -1,14 +1,14 @@
+let sound = document.getElementById("sound");
+
 function draw(predictions) {
-  console.log(predictions);
   let container = document.getElementById("container");
-  let rect = document.getElementById("rect");
+  let rect = document.querySelector("#rect");
   let widthCanvas = document.getElementById("canvas").width;
   let heightCanvas = document.getElementById("canvas").height;
   let xFace, yFace, widthFace, heightFace;
   let widthWindow = window.innerWidth;
   let heightWindow = window.innerHeight;
-  let x,y;
-
+  let x, y;
 
   if (predictions.length > 0) {
     // control if we have at least an item with label face
@@ -16,7 +16,6 @@ function draw(predictions) {
 
     // if we have a face
     if (face) {
-
       // get the coordinates of the face and size
       xFace = face.bbox[0];
       yFace = face.bbox[1];
@@ -29,29 +28,36 @@ function draw(predictions) {
       //change the position of the rect and the colors
       rect.style.opacity = `1`;
       rect.style.left = `${x}px `;
-      rect.style.backgroundColor = "black";
+      rect.style.backgroundColor = "pink";
       rect.style.borderRadius = "0%";
-      rect.style.width = `${mapRange(widthFace, 0, widthCanvas, 0, widthWindow)}px`;
-      rect.style.height = `${mapRange(heightFace, 0, heightCanvas, 0, heightWindow)}px`;
+      rect.style.width = `${mapRange(widthFace,0,widthCanvas,0,widthWindow)}px`;
+      rect.style.height = `${mapRange(heightFace,0,heightCanvas, 0,heightWindow)}px`;
       rect.innerHTML = `x: ${xFace} <br> y: ${yFace} <br> width: ${widthFace} <br> height: ${heightFace}`;
-      
+
       //change the color of the container if the face is on the right or on the left
-      if((xFace + (widthFace/2)) > widthCanvas/2){
+      if (xFace + widthFace / 2 > widthCanvas / 2) {
         container.style.backgroundColor = "yellow";
-      }
-      else {
+      } else {
         container.style.backgroundColor = "white";
       }
-        
-    } 
+
+      //if face is close to the camera
+      if (widthFace > 200) {
+        rect.style.backgroundColor = "green";
+        sound.play();
+      } else {
+        sound.pause();
+      }
+    }
 
     // if we don't have a face, we hide the rect
     else {
-      rect.style.backgroundColor = "red";
-      rect.style.borderRadius = "50%";
-      rect.innerHTML = ``;
-
+      rect.style.backgroundColor = "blue";
     }
+  } 
+  //out of the canvas
+  else {
+    rect.style.backgroundColor = "red";
   }
 }
 

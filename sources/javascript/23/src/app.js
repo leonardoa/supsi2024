@@ -1,11 +1,11 @@
-let video = document.getElementById("movie");
 function draw(predictions) {
   let sound = document.getElementById("sound");
-
   let heightCanvas = document.getElementById("canvas").height;
+  let widthCanvas = document.getElementById("canvas").width;
 
 
   if (predictions.length > 0) {
+
     let open = predictions.filter((item) => item.label === "open");
     if (open.length >= 1) {
       sound.play();
@@ -13,11 +13,11 @@ function draw(predictions) {
       sound.pause();
     }
 
-    let close = predictions.filter((item) => item.label === "closed");
+    let close = predictions.filter((item) => item.label === "point");
     if (close.length >= 1) {
       let xClose = close[0].bbox[0];
       let yClose = close[0].bbox[1];
-      let volume = mapRange(yClose, 0, heightCanvas, 1, 0);
+      let volume = mapRange(xClose, 0, widthCanvas, 0, 1);
       if(volume > 0 && volume < 1){
         sound.volume = volume;
       }
