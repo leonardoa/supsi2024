@@ -13,11 +13,11 @@ function draw(predictions) {
       sound.pause();
     }
 
-    let close = predictions.filter((item) => item.label === "point");
+    let close = predictions.filter((item) => item.label === "closed");
     if (close.length >= 1) {
       let xClose = close[0].bbox[0];
       let yClose = close[0].bbox[1];
-      let volume = mapRange(xClose, 0, widthCanvas, 0, 1);
+      let volume = mapRange(yClose, 0, widthCanvas, 0, 1);
       if(volume > 0 && volume < 1){
         sound.volume = volume;
       }
